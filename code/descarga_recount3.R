@@ -29,7 +29,7 @@ colData(rse_gene_ERP110066)[
   grepl("^sra_attribute", colnames(colData(rse_gene_ERP110066)))
 ]
 #Se guarda el objeto RSE en un archivo
-(rse_gene_ERP110066, file="rse_gene_ERP110066.RData")
+save(rse_gene_ERP110066, file="rse_gene_ERP110066.RData")
 #Se explora la informacion de filas y columnas
 colData(rse_gene_ERP110066)
 rowData(rse_gene_ERP110066)
