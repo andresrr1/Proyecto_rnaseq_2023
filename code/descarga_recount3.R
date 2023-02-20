@@ -21,7 +21,7 @@ proj_info <- subset(
 rse_gene_ERP110066 <- create_rse(proj_info)
 #Convertir las cuentas por n a cuentas por lectura
 
-assay(rse_gene_ERP110066, "counts") <- compute_read_counts(rse_gene_ERP11006)
+assay(rse_gene_ERP110066, "counts") <- compute_read_counts(rse_gene_ERP110066)
 #Generar un data frame mas facil de acceder
 rse_gene_ERP110066 <- expand_sra_attributes(rse_gene_ERP110066)
 colData(rse_gene_ERP110066)[
