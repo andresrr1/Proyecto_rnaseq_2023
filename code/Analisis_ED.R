@@ -29,3 +29,7 @@ summary(rse_gene_ERP110066$assigned_gene_prop)
 
 promedios_genes <- rowMeans(assay(rse_gene_ERP110066, "counts"))
 summary(promedios_genes)
+
+
+rse_gene_ERP110066_completo <- rse_gene_ERP110066
+rse_gene_ERP110066 <- rse_gene_ERP110066[promedios_genes > 0.1, ]
