@@ -33,3 +33,14 @@ summary(promedios_genes)
 
 rse_gene_ERP110066_completo <- rse_gene_ERP110066
 rse_gene_ERP110066 <- rse_gene_ERP110066[promedios_genes > 0.1, ]
+
+
+round(nrow(rse_gene_ERP110066) / nrow(rse_gene_ERP110066_completo) * 100, 2)
+
+DGE <- DGEList(
+  counts = assay(rse_gene_ERP110066, "counts"),
+  genes = rowData(rse_gene_ERP110066)
+)
+
+DGE <- calcNormFactors(DGE)
+
