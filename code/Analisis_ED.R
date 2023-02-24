@@ -44,3 +44,8 @@ DGE <- DGEList(
 
 DGE <- calcNormFactors(DGE)
 
+ggplot(as.data.frame(colData(rse_gene_ERP110066)), aes(y = assigned_gene_prop, x = sra_attribute.growth_condition)) +
+  geom_boxplot() +
+  theme_bw(base_size = 20) +
+  ylab("Assigned Gene Prop") +
+  xlab("Growth condition")
